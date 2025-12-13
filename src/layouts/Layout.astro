@@ -1,0 +1,99 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang='es'>
+	<head>
+		<meta charset='UTF-8' />
+		<meta
+			name='description'
+			content='Portfolio de Norma Luján Brignoni - Artista Plástica'
+		/>
+		<meta name='viewport' content='width=device-width' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	:root {
+		--primary: #2d2d2d;
+		--accent: #8b6f47;
+		--light: #f8f8f8;
+		--white: #ffffff;
+	}
+
+	body {
+		font-family: 'Georgia', serif;
+		color: var(--primary);
+		background: var(--white);
+		line-height: 1.6;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	@keyframes fadeInUp {
+		from {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes slideInDown {
+		from {
+			opacity: 0;
+			transform: translateY(-20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.animate-on-scroll {
+		opacity: 0;
+		animation: fadeInUp 0.8s ease-out forwards;
+	}
+
+	.animate-delay-1 {
+		animation-delay: 0.1s;
+	}
+	.animate-delay-2 {
+		animation-delay: 0.2s;
+	}
+	.animate-delay-3 {
+		animation-delay: 0.3s;
+	}
+	.animate-delay-4 {
+		animation-delay: 0.4s;
+	}
+</style>

@@ -1,0 +1,96 @@
+<section class='contact-section' id='contacto'>
+  <h2 class='animate-on-scroll'>Contacto</h2>
+  <p class='subtitle animate-on-scroll animate-delay-1'>
+    ¿Interesado en mis obras o en tomar clases? Escribime
+  </p>
+  <div class='contact-info'>
+    <div class='contact-item animate-on-scroll animate-delay-2'>
+      <div class='contact-icon'>📧</div>
+      <a href='mailto:norma@elplacerdepintar.com'>norma@elplacerdepintar.com</a>
+    </div>
+    <div class='contact-item animate-on-scroll animate-delay-3'>
+      <div class='contact-icon'>📱</div>
+      <a href='tel:+549XXXXXXXXX'>+54 9 XXX XXX XXXX</a>
+    </div>
+    <div class='contact-item animate-on-scroll animate-delay-4'>
+      <div class='contact-icon'>📷</div>
+      <a href='#' target='_blank'>Instagram</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-section {
+    padding: 6rem 3rem;
+    text-align: center;
+  }
+
+  .contact-section h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 3rem;
+  }
+
+  .contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .contact-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .contact-icon {
+    font-size: 2rem;
+    color: var(--accent);
+    transition: transform 0.3s ease;
+  }
+
+  .contact-item:hover .contact-icon {
+    transform: scale(1.2);
+  }
+
+  .contact-item a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+
+  .contact-item a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+  }
+
+  .contact-item a:hover {
+    color: var(--accent);
+  }
+
+  .contact-item a:hover::after {
+    width: 100%;
+  }
+</style>

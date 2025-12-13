@@ -1,0 +1,406 @@
+---
+const obras = [
+  {
+    id: 1,
+    title: 'Tigre Hiperrealista',
+    category: 'cuadros',
+    technique: 'Acrílico sobre tela',
+    image: '/images/placeholder-1.jpg',
+  },
+  {
+    id: 2,
+    title: 'Técnica Mixta',
+    category: 'cuadros',
+    technique: 'Óleo sobre tela',
+    image: '/images/placeholder-2.jpg',
+  },
+  {
+    id: 3,
+    title: 'Abstracto',
+    category: 'cuadros',
+    technique: 'Acrílico sobre tela',
+    image: '/images/placeholder-3.jpg',
+  },
+  {
+    id: 4,
+    title: 'Teja Colonial',
+    category: 'tejas',
+    technique: 'Acrílico sobre teja',
+    image: '/images/placeholder-4.jpg',
+  },
+  {
+    id: 5,
+    title: 'Teja Decorativa',
+    category: 'tejas',
+    technique: 'Técnica mixta',
+    image: '/images/placeholder-5.jpg',
+  },
+  {
+    id: 6,
+    title: 'Mural - Dojo de Artes Marciales',
+    category: 'murales',
+    technique: 'Acrílico sobre pared',
+    image: '/images/placeholder-6.jpg',
+  },
+  {
+    id: 7,
+    title: 'Buda',
+    category: 'murales',
+    technique: 'Mural decorativo',
+    image: '/images/placeholder-7.jpg',
+  },
+  {
+    id: 8,
+    title: 'Retrato',
+    category: 'retratos',
+    technique: 'Óleo sobre tela',
+    image: '/images/placeholder-8.jpg',
+  },
+  {
+    id: 9,
+    title: 'Lolita',
+    category: 'retratos',
+    technique: 'Acrílico sobre tela',
+    image: '/images/placeholder-9.jpg',
+  },
+];
+---
+
+<section class='filter-section'>
+  <div class='filter-buttons'>
+    <button class='filter-btn active' data-filter='all'>Todas las Obras</button>
+    <button class='filter-btn' data-filter='cuadros'>Cuadros</button>
+    <button class='filter-btn' data-filter='tejas'>Tejas</button>
+    <button class='filter-btn' data-filter='murales'>Murales</button>
+    <button class='filter-btn' data-filter='retratos'>Retratos</button>
+  </div>
+</section>
+
+<section class='gallery-section' id='galeria'>
+  <div class='gallery-grid'>
+    {
+      obras.map((obra, index) => (
+        <div
+          class={`gallery-item animate-on-scroll animate-delay-${(index % 4) + 1}`}
+          data-category={obra.category}
+          data-delay={`${index * 0.05}s`}
+        >
+          <img src={obra.image} alt={obra.title} loading='lazy' />
+          <div class='gallery-overlay'>
+            <h3>{obra.title}</h3>
+            <p>{obra.technique}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<div class='modal' id='modal'>
+  <div class='modal-content'>
+    <button class='modal-close'>×</button>
+    <div class='modal-image'>
+      <img id='modal-img' src='' alt='' />
+    </div>
+    <div class='modal-info'>
+      <h2 id='modal-title'></h2>
+      <p id='modal-desc'></p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .filter-section {
+    padding: 3rem;
+    background: var(--white);
+    text-align: center;
+    position: sticky;
+    top: 80px;
+    z-index: 100;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .filter-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    padding: 0.7rem 2rem;
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    font-family: 'Georgia', serif;
+  }
+
+  .filter-btn:hover,
+  .filter-btn.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(139, 111, 71, 0.2);
+  }
+
+  .gallery-section {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 4rem 3rem;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--light);
+    aspect-ratio: 4/3;
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease;
+    border-radius: 4px;
+  }
+
+  .gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.08);
+  }
+
+  .gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+    padding: 2rem;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    color: white;
+  }
+
+  .gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+  }
+
+  .gallery-overlay h3 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 0.3rem;
+  }
+
+  .gallery-overlay p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .modal.active {
+    display: flex;
+  }
+
+  .modal-content {
+    max-width: 1200px;
+    max-height: 90vh;
+    display: flex;
+    gap: 2rem;
+    background: white;
+    padding: 2rem;
+    position: relative;
+    border-radius: 8px;
+    animation: fadeInUp 0.4s ease-out;
+  }
+
+  .modal-image {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-image img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+
+  .modal-info {
+    flex: 1;
+    padding: 2rem;
+  }
+
+  .modal-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+  }
+
+  .modal-close:hover {
+    transform: scale(1.2) rotate(90deg);
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  @media (max-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+    .modal-content {
+      flex-direction: column;
+      overflow-y: auto;
+    }
+  }
+</style>
+
+<script>
+  // Intersection Observer for scroll animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px',
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const target = entry.target as HTMLElement;
+        target.style.opacity = '1';
+        target.style.animation = `fadeInUp 0.8s ease-out forwards ${target.dataset.delay || '0s'}`;
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+    observer.observe(el);
+  });
+
+  // Filter functionality
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  filterButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const filter = (button as HTMLElement).dataset.filter;
+
+      filterButtons.forEach((btn) => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      galleryItems.forEach((item, index) => {
+        const htmlItem = item as HTMLElement;
+        if (
+          filter === 'all' || htmlItem.dataset.category === filter
+        ) {
+          htmlItem.style.display = 'block';
+          setTimeout(() => {
+            htmlItem.style.opacity = '1';
+            htmlItem.style.animation = `fadeInUp 0.6s ease-out ${index * 0.05}s forwards`;
+          }, 10);
+        } else {
+          htmlItem.style.opacity = '0';
+          setTimeout(() => (htmlItem.style.display = 'none'), 300);
+        }
+      });
+    });
+  });
+
+  // Modal functionality
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+  const modalTitle = document.getElementById('modal-title');
+  const modalDesc = document.getElementById('modal-desc');
+  const modalClose = document.querySelector('.modal-close');
+
+  galleryItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('img') as HTMLImageElement;
+      const titleEl = item.querySelector('h3');
+      const descEl = item.querySelector('p');
+
+      if (!img || !titleEl || !descEl || !modalImg || !modalTitle || !modalDesc || !modal) return;
+
+      const title = titleEl.textContent;
+      const desc = descEl.textContent;
+
+      (modalImg as HTMLImageElement).src = img.src;
+      (modalTitle as HTMLElement).textContent = title || '';
+      (modalDesc as HTMLElement).textContent = desc || '';
+
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeModal() {
+    if (!modal) return;
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+
+  if (modalClose) {
+    modalClose.addEventListener('click', closeModal);
+  }
+  
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>

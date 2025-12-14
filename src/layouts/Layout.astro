@@ -1,6 +1,7 @@
 ---
 import Footer from './Footer.astro';
 import Header from './Header.astro';
+import '../styles/global.css';
 
 interface Props {
 	title: string;
@@ -30,31 +31,7 @@ const { title } = Astro.props;
 	</body>
 </html>
 
-<style is:global>
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-
-	:root {
-		--primary: #2d2d2d;
-		--accent: #8b6f47;
-		--light: #f8f8f8;
-		--white: #ffffff;
-	}
-
-	body {
-		font-family: 'Georgia', serif;
-		color: var(--primary);
-		background: var(--white);
-		line-height: 1.6;
-	}
-
-	html {
-		scroll-behavior: smooth;
-	}
-
+<style>
 	@keyframes fadeInUp {
 		from {
 			opacity: 0;

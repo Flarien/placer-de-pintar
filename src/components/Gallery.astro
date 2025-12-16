@@ -1,6 +1,379 @@
 ---
 import SectionContainer from '../components/ui/SectionContainer.astro';
+import BtnToGallery from './ui/BtnToGallery.astro';
+import FullGalleryModal from '../components/FullGalleryModal.astro';
+import obras from '../data/obras.json';
 ---
-<SectionContainer >
 
+<SectionContainer>
+  <!-- SECCIÓN CUADROS -->
+  <section class='preview-section preview-cuadros'>
+    <div class='preview-container'>
+      <h2 class='section-title'>Cuadros</h2>
+
+      <div class='grid-cuadros'>
+        <div class='grid-item'>
+          <img
+            src='/images/cuadros/cuadros_01.webp'
+            alt='Cuadro 1'
+            loading='lazy'
+          />
+        </div>
+        <div class='grid-item'>
+          <img
+            src='/images/cuadros/cuadros_02.webp'
+            alt='Cuadro 2'
+            loading='lazy'
+          />
+        </div>
+        <div class='grid-item'>
+          <img
+            src='/images/cuadros/cuadros_03.webp'
+            alt='Cuadro 3'
+            loading='lazy'
+          />
+        </div>
+        <div class='grid-item'>
+          <img
+            src='/images/cuadros/cuadros_04.webp'
+            alt='Cuadro 4'
+            loading='lazy'
+          />
+        </div>
+        <div class='grid-item'>
+          <img
+            src='/images/cuadros/cuadros_05.webp'
+            alt='Cuadro 5'
+            loading='lazy'
+          />
+        </div>
+        <div class='grid-item'>
+          <img
+            src='/images/cuadros/cuadros_06.webp'
+            alt='Cuadro 6'
+            loading='lazy'
+          />
+        </div>
+      </div>
+      <div class='flex-btn'>
+        <BtnToGallery accion='cuadros'> Ver más cuadros </BtnToGallery>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN TEJAS (fondo accent, grid vertical) -->
+  <section class='preview-section preview-tejas'>
+    <div class='preview-container'>
+      <h2 class='section-title section-title--light'>Tejas Coloniales Pintadas</h2>
+
+      <div class='grid-tejas'>
+        <div class='grid-item grid-item--vertical'>
+          <img src='/images/tejas/tejas_08.webp' alt='Teja 1' loading='lazy' />
+        </div>
+        <div class='grid-item grid-item--vertical'>
+          <img src='/images/tejas/tejas_02.webp' alt='Teja 2' loading='lazy' />
+        </div>
+        <div class='grid-item grid-item--vertical'>
+          <img src='/images/tejas/tejas_03.webp' alt='Teja 3' loading='lazy' />
+        </div>
+        <div class='grid-item grid-item--vertical'>
+          <img src='/images/tejas/tejas_04.webp' alt='Teja 4' loading='lazy' />
+        </div>
+      </div>
+      <div class='flex-btn'>
+        <BtnToGallery accion='tejas'> Ver más tejas </BtnToGallery>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN FRASES -->
+  <section class='preview-section preview-frases'>
+    <div class='preview-container'>
+      <h2 class='section-title'>Cuadritos con Frases</h2>
+
+      <div class='grid-frases'>
+        <div class='grid-item'>
+          <img
+            src='/images/frases/frases_01.webp'
+            alt='Frase 1'
+            loading='lazy'
+          />
+        </div>
+        <div class='grid-item'>
+          <img
+            src='/images/frases/frases_02.webp'
+            alt='Frase 2'
+            loading='lazy'
+          />
+        </div>
+        <div class='grid-item'>
+          <img
+            src='/images/frases/frases_03.webp'
+            alt='Frase 3'
+            loading='lazy'
+          />
+        </div>
+        <div class='grid-item'>
+          <img
+            src='/images/frases/frases_04.webp'
+            alt='Frase 4'
+            loading='lazy'
+          />
+        </div>
+        <div class='grid-item'>
+          <img
+            src='/images/frases/frases_05.webp'
+            alt='Frase 5'
+            loading='lazy'
+          />
+        </div>
+        <div class='grid-item'>
+          <img
+            src='/images/frases/frases_06.webp'
+            alt='Frase 6'
+            loading='lazy'
+          />
+        </div>
+      </div>
+      <div class='flex-btn'>
+        <BtnToGallery accion='cuadros'> Ver más cuadros </BtnToGallery>
+      </div>
+    </div>
+  </section>
 </SectionContainer>
+
+<FullGalleryModal obras={obras} />
+
+<style>
+  /* BASE SECCIONES */
+  .preview-section {
+    padding: 6rem 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .preview-cuadros {
+    background: var(--white);
+  }
+
+  .preview-tejas {
+    background: var(--accent);
+  }
+
+  .preview-frases {
+    background: var(--light);
+  }
+
+  .preview-container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* TÍTULOS */
+  .section-title {
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--primary);
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background: var(--accent);
+  }
+
+  .section-title--light {
+    color: var(--white);
+  }
+
+  .section-title--light::after {
+    background: var(--white);
+  }
+
+  /* GRID CUADROS (6 items, cuadrados) */
+  .grid-cuadros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  /* GRID TEJAS (4 items, verticales) */
+  .grid-tejas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  /* GRID FRASES (6 items, cuadrados) */
+  .grid-frases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  /* ITEMS DEL GRID */
+  .grid-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: #f5f5f5;
+    border-radius: 8px;
+    aspect-ratio: 1/1;
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease;
+  }
+
+  .grid-item--vertical {
+    aspect-ratio: 3/4;
+  }
+
+  .grid-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  }
+
+  .preview-tejas .grid-item:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  }
+
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .grid-item:hover img {
+    transform: scale(1.1);
+  }
+
+  /* BOTÓN VER MÁS */
+  .flex-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* RESPONSIVE */
+
+  /* Tablets */
+  @media (max-width: 1024px) {
+    .grid-cuadros,
+    .grid-frases {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .grid-tejas {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .preview-section {
+      padding: 4rem 1.5rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .grid-cuadros,
+    .grid-frases,
+    .grid-tejas {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .grid-item--vertical {
+      aspect-ratio: 1/1;
+    }
+
+    .btn-ver-mas {
+      width: 100%;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+    }
+  }
+
+  /* Animaciones de entrada */
+  .grid-item {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .grid-cuadros .grid-item:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .grid-cuadros .grid-item:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .grid-cuadros .grid-item:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .grid-cuadros .grid-item:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .grid-cuadros .grid-item:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .grid-cuadros .grid-item:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+
+  .grid-tejas .grid-item:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .grid-tejas .grid-item:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .grid-tejas .grid-item:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .grid-tejas .grid-item:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+
+  .grid-frases .grid-item:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .grid-frases .grid-item:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .grid-frases .grid-item:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .grid-frases .grid-item:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .grid-frases .grid-item:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .grid-frases .grid-item:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+</style>

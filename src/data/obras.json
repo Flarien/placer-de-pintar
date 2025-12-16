@@ -1,0 +1,373 @@
+[
+  {
+    "id": 1,
+    "title": "Cuadro Gato",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/cuadros/cuadros_01.webp"
+  },
+  {
+    "id": 2,
+    "title": "Cuadro Gatos Xinjiang",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/cuadros/cuadros_04.webp"
+  },
+  {
+    "id": 3,
+    "title": "Cuadro leopardo",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/cuadros/cuadros_05.webp"
+  },
+  {
+    "id": 4,
+    "title": "Cuadro Caballo Alazan",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/cuadros/cuadros_06.webp"
+  },
+  {
+    "id": 5,
+    "title": "Cuadro Caballo Palomino",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/cuadros/cuadros_08.webp"
+  },
+  {
+    "id": 6,
+    "title": "Cuadro Andy (perro ovejero alemán)",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/cuadros/cuadros_09.webp"
+  },
+  {
+    "id": 7,
+    "title": "Cuadro atardecer",
+    "category": "cuadros",
+    "technique": "Acrílico sobre bastidor de tela",
+    "image": "/images/cuadros/cuadros_10.webp"
+  },
+  {
+    "id": 8,
+    "title": "Cuadro negra con cacharros",
+    "category": "cuadros",
+    "technique": "Acrílico sobre bastidor de madera",
+    "image": "/images/cuadros/cuadros_11.webp"
+  },
+  {
+    "id": 9,
+    "title": "Cuadro Tigre",
+    "category": "cuadros",
+    "technique": "Acrílico sobre bastidor de madera",
+    "image": "/images/cuadros/cuadros_12.webp"
+  },
+  {
+    "id": 10,
+    "title": "Cuadro Caballo Blanco",
+    "category": "cuadros",
+    "technique": "Acrílico sobre bastidor de madera",
+    "image": "/images/cuadros/cuadros_13.webp"
+  },
+  {
+    "id": 11,
+    "title": "Cuadro Pareja 1",
+    "category": "cuadros",
+    "technique": "Acrílico sobre bastidor de tela",
+    "image": "/images/cuadros/cuadros_16.webp"
+  },
+  {
+    "id": 12,
+    "title": "Cuadro Pareja 2",
+    "category": "cuadros",
+    "technique": "Acrílico sobre bastidor de tela",
+    "image": "/images/cuadros/cuadros_17.webp"
+  },
+  {
+    "id": 13,
+    "title": "Cuadro Amapolas naranjas",
+    "category": "cuadros",
+    "technique": "Acrílico sobre bastidor de madera",
+    "image": "/images/cuadros/cuadros_18.webp"
+  },
+  {
+    "id": 14,
+    "title": "Cuadro paisaje campestre",
+    "category": "cuadros",
+    "technique": "Acrílico sobre bastidor de madera",
+    "image": "/images/cuadros/cuadros_19.webp"
+  },
+  {
+    "id": 15,
+    "title": "Cuadro Mandala 1",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/cuadros/cuadros_20.webp"
+  },
+  {
+    "id": 16,
+    "title": "Cuadro Mandala 2",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/cuadros/cuadros_23.webp"
+  },
+  {
+    "id": 17,
+    "title": "Cuadro Flores moradas",
+    "category": "cuadros",
+    "technique": "Acrílico sobre bastidor de madera",
+    "image": "/images/cuadros/cuadros_24.webp"
+  },
+  {
+    "id": 18,
+    "title": "Cuadro Paisaje marítimo",
+    "category": "cuadros",
+    "technique": "Acrílico sobre bastidor de madera",
+    "image": "/images/cuadros/cuadros_26.webp"
+  },
+  {
+    "id": 19,
+    "title": "Cuadro Ganesha",
+    "category": "cuadros",
+    "technique": "Acrílico sobre placa metálica",
+    "image": "/images/cuadros/cuadros_27.webp"
+  },
+  {
+    "id": 20,
+    "title": "Frases Motivacionales",
+    "category": "frases",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/frases/frases_01.webp"
+  },
+  {
+    "id": 21,
+    "title": "Frases Motivacionales",
+    "category": "frases",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/frases/frases_02.webp"
+  },
+  {
+    "id": 22,
+    "title": "Frases Motivacionales",
+    "category": "frases",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/frases/frases_06.webp"
+  },
+  {
+    "id": 23,
+    "title": "Frases Motivacionales",
+    "category": "frases",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/frases/frases_11.webp"
+  },
+  {
+    "id": 24,
+    "title": "Frases Motivacionales",
+    "category": "frases",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/frases/frases_12.webp"
+  },
+  {
+    "id": 25,
+    "title": "Frases Motivacionales",
+    "category": "frases",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/frases/frases_13.webp"
+  },
+  {
+    "id": 26,
+    "title": "Frases Motivacionales",
+    "category": "frases",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/frases/frases_17.webp"
+  },
+  {
+    "id": 27,
+    "title": "Frases Motivacionales",
+    "category": "frases",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/frases/frases_19.webp"
+  },
+  {
+    "id": 28,
+    "title": "Frases Motivacionales",
+    "category": "frases",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/frases/frases_20.webp"
+  },
+  {
+    "id": 29,
+    "title": "Frases Motivacionales",
+    "category": "frases",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/frases/frases_21.webp"
+  },
+  {
+    "id": 30,
+    "title": "Frases Motivacionales",
+    "category": "frases",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/frases/frases_25.webp"
+  },
+  {
+    "id": 31,
+    "title": "Frases Motivacionales",
+    "category": "frases",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/frases/frases_27.webp"
+  },
+  {
+    "id": 32,
+    "title": "Frases Motivacionales",
+    "category": "frases",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/frases/frases_28.webp"
+  },
+  {
+    "id": 33,
+    "title": "Frases Motivacionales",
+    "category": "frases",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/frases/frases_29.webp"
+  },
+  {
+    "id": 34,
+    "title": "Frases Motivacionales",
+    "category": "frases",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/frases/frases_30.webp"
+  },
+  {
+    "id": 35,
+    "title": "Frases Motivacionales",
+    "category": "frases",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/frases/frases_31.webp"
+  },
+  {
+    "id": 36,
+    "title": "Frases Motivacionales",
+    "category": "frases",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/frases/frases_32.webp"
+  },
+  {
+    "id": 37,
+    "title": "Frases Motivacionales",
+    "category": "frases",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/frases/frases_33.webp"
+  },
+  {
+    "id": 38,
+    "title": "Frases Motivacionales",
+    "category": "frases",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "/images/frases/frases_34.webp"
+  },
+  {
+    "id": 39,
+    "title": "Tejas varias",
+    "category": "tejas",
+    "technique": "Tejas Coloniales Pintadas a Mano",
+    "image": "/images/tejas/tejas_01.webp"
+  },
+  {
+    "id": 40,
+    "title": "Árboles",
+    "category": "tejas",
+    "technique": "Tejas Coloniales Pintadas a Mano",
+    "image": "/images/tejas/tejas_02.webp"
+  },
+  {
+    "id": 41,
+    "title": "Pareja de gatos",
+    "category": "tejas",
+    "technique": "Tejas Coloniales Pintadas a Mano",
+    "image": "/images/tejas/tejas_03.webp"
+  },
+  {
+    "id": 42,
+    "title": "Paisaje naif",
+    "category": "tejas",
+    "technique": "Tejas Coloniales Pintadas a Mano",
+    "image": "/images/tejas/tejas_04.webp"
+  },
+  {
+    "id": 43,
+    "title": "Teja con calle y num de casa",
+    "category": "tejas",
+    "technique": "Tejas Coloniales Pintadas a Mano",
+    "image": "/images/tejas/tejas_05.webp"
+  },
+  {
+    "id": 44,
+    "title": "Cosmos y colibrí",
+    "category": "tejas",
+    "technique": "Tejas Coloniales Pintadas a Mano",
+    "image": "/images/tejas/tejas_06.webp"
+  },
+  {
+    "id": 45,
+    "title": "Luces en el bosque",
+    "category": "tejas",
+    "technique": "Tejas Coloniales Pintadas a Mano",
+    "image": "/images/tejas/tejas_07.webp"
+  },
+  {
+    "id": 46,
+    "title": "Libelulas",
+    "category": "tejas",
+    "technique": "Tejas Coloniales Pintadas a Mano",
+    "image": "/images/tejas/tejas_08.webp"
+  },
+  {
+    "id": 47,
+    "title": "Gatito travieso",
+    "category": "varios",
+    "technique": "Acrilico + decoupage en caja de madera",
+    "image": "/images/varios/varios_01_caja.webp"
+  },
+  {
+    "id": 48,
+    "title": "Jarrón decorativo",
+    "category": "varios",
+    "technique": "Acrílico sobre jarrón de cerámica",
+    "image": "/images/varios/varios_03_jarron.webp"
+  },
+  {
+    "id": 49,
+    "title": "Jarrónes decorativos",
+    "category": "varios",
+    "technique": "Acrílico sobre jarrón de cerámica",
+    "image": "/images/varios/varios_09_jarron.webp"
+  },
+  {
+    "id": 50,
+    "title": "Mosaiquismo 1",
+    "category": "varios",
+    "technique": "Mosaiquismo",
+    "image": "/images/varios/varios_05_mosaiquismo.webp"
+  },
+  {
+    "id": 51,
+    "title": "Mosaiquismo 2",
+    "category": "varios",
+    "technique": "Mosaiquismo",
+    "image": "/images/varios/varios_11_mosaiquismo.webp"
+  },
+  {
+    "id": 52,
+    "title": "Casitas decorativas porta llaves",
+    "category": "varios",
+    "technique": "Acrílico sobre madera. Técnicas de recuperación de carpintería",
+    "image": "/images/varios/varios_16_ganchos.webp"
+  },
+  {
+    "id": 53,
+    "title": "Cuadro Caballo Negro",
+    "category": "cuadros",
+    "technique": "Acrílico sobre bastidor de madera",
+    "image": "/images/cuadros/cuadros_14.webp"
+  }
+]

@@ -7,54 +7,57 @@ import obras from '../data/obras.json';
 
 <SectionContainer>
   <!-- SECCIÓN CUADROS -->
+  <!-- SECCIÓN CUADROS -->
   <section class='preview-section preview-cuadros'>
     <div class='preview-container'>
       <h2 class='section-title'>Cuadros</h2>
 
-      <div class='grid-cuadros'>
-        <div class='grid-item'>
+      <!-- TIGRE HERO -->
+      <div class='hero-image-container'>
+        <div class='hero-image'>
           <img
-            src='/images/cuadros/cuadros_01.webp'
-            alt='Cuadro 1'
+            src='/images/cuadros/cuadros_12.webp'
+            alt='Tigre Hiperrealista'
             loading='lazy'
           />
+          <div class='hero-overlay'>
+            <h3>Tigre Hiperrealista</h3>
+          </div>
         </div>
-        <div class='grid-item'>
+      </div>
+
+      <!-- 4 CUADROS GRID -->
+      <div class='grid-cuadros-small'>
+        <div class='grid-item grid-item-reveal'>
           <img
-            src='/images/cuadros/cuadros_02.webp'
+            src='/images/cuadros/cuadros_08.webp'
             alt='Cuadro 2'
             loading='lazy'
           />
         </div>
-        <div class='grid-item'>
+        <div class='grid-item grid-item-reveal'>
           <img
-            src='/images/cuadros/cuadros_03.webp'
+            src='/images/cuadros/cuadros_19.webp'
             alt='Cuadro 3'
             loading='lazy'
           />
         </div>
-        <div class='grid-item'>
+        <div class='grid-item grid-item-reveal'>
           <img
-            src='/images/cuadros/cuadros_04.webp'
+            src='/images/cuadros/cuadros_18.webp'
             alt='Cuadro 4'
             loading='lazy'
           />
         </div>
-        <div class='grid-item'>
+        <div class='grid-item grid-item-reveal'>
           <img
-            src='/images/cuadros/cuadros_05.webp'
+            src='/images/cuadros/cuadros_10.webp'
             alt='Cuadro 5'
             loading='lazy'
           />
         </div>
-        <div class='grid-item'>
-          <img
-            src='/images/cuadros/cuadros_06.webp'
-            alt='Cuadro 6'
-            loading='lazy'
-          />
-        </div>
       </div>
+
       <div class='flex-btn'>
         <BtnToGallery accion='cuadros'> Ver más cuadros </BtnToGallery>
       </div>
@@ -64,20 +67,22 @@ import obras from '../data/obras.json';
   <!-- SECCIÓN TEJAS (fondo accent, grid vertical) -->
   <section class='preview-section preview-tejas'>
     <div class='preview-container'>
-      <h2 class='section-title section-title--light'>Tejas Coloniales Pintadas</h2>
+      <h2 class='section-title section-title--light'>
+        Tejas Coloniales Pintadas
+      </h2>
 
       <div class='grid-tejas'>
         <div class='grid-item grid-item--vertical'>
-          <img src='/images/tejas/tejas_08.webp' alt='Teja 1' loading='lazy' />
+          <img src='/images/tejas/tejas_14.webp' alt='Teja 1' loading='lazy' />
         </div>
         <div class='grid-item grid-item--vertical'>
-          <img src='/images/tejas/tejas_02.webp' alt='Teja 2' loading='lazy' />
+          <img src='/images/tejas/tejas_13.webp' alt='Teja 2' loading='lazy' />
         </div>
         <div class='grid-item grid-item--vertical'>
-          <img src='/images/tejas/tejas_03.webp' alt='Teja 3' loading='lazy' />
+          <img src='/images/tejas/tejas_16.webp' alt='Teja 3' loading='lazy' />
         </div>
         <div class='grid-item grid-item--vertical'>
-          <img src='/images/tejas/tejas_04.webp' alt='Teja 4' loading='lazy' />
+          <img src='/images/tejas/tejas_17.webp' alt='Teja 4' loading='lazy' />
         </div>
       </div>
       <div class='flex-btn'>
@@ -160,10 +165,6 @@ import obras from '../data/obras.json';
     background: var(--accent);
   }
 
-  .preview-frases {
-    background: var(--light);
-  }
-
   .preview-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -203,7 +204,7 @@ import obras from '../data/obras.json';
   /* GRID CUADROS (6 items, cuadrados) */
   .grid-cuadros {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-bottom: 3rem;
   }
@@ -228,8 +229,20 @@ import obras from '../data/obras.json';
   .grid-item {
     position: relative;
     overflow: hidden;
-    cursor: pointer;
     background: #f5f5f5;
+    border-radius: 8px;
+    aspect-ratio: 1/1;
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease;
+  }
+
+  .grid-item1 {
+    margin: 0 auto;
+    width: 300px;
+    object-fit: contain;
+    position: relative;
+    overflow: hidden;
     border-radius: 8px;
     aspect-ratio: 1/1;
     transition:
@@ -375,5 +388,271 @@ import obras from '../data/obras.json';
   }
   .grid-frases .grid-item:nth-child(6) {
     animation-delay: 0.6s;
+  }
+
+  /* BASE SECCIÓN CUADROS */
+  .preview-cuadros {
+    background: var(--white);
+    padding: 6rem 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .preview-container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* TÍTULO */
+  .section-title {
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--primary);
+    letter-spacing: 2px;
+    margin-bottom: 4rem;
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    animation: fadeInDown 0.8s ease-out 0.2s forwards;
+  }
+
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background: var(--accent);
+  }
+
+  /* HERO IMAGE (TIGRE) */
+  .hero-image-container {
+    margin-bottom: 3rem;
+    opacity: 0;
+    animation: revealFromScale 1.2s ease-out 0.4s forwards;
+  }
+
+  @keyframes revealFromScale {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .hero-image {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+  }
+
+  .hero-image:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+  }
+
+  .hero-image:hover img {
+    transform: scale(1.08);
+  }
+
+  .hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+    padding: 3rem 2rem;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+  }
+
+  .hero-image:hover .hero-overlay {
+    transform: translateY(0);
+  }
+
+  .hero-overlay h3 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  /* GRID 4 CUADROS PEQUEÑOS */
+  .grid-cuadros-small {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .grid-item {
+    position: relative;
+    overflow: hidden;
+    background: #f5f5f5;
+    border-radius: 8px;
+    aspect-ratio: 1/1;
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease;
+  }
+
+  /* EFECTO REVEAL AL SCROLL (solo CSS) */
+  .grid-item-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideInUp 0.8s ease-out forwards;
+  }
+
+  @keyframes slideInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Delays escalonados para cada item */
+  .grid-cuadros-small .grid-item:nth-child(1) {
+    animation-delay: 0.6s;
+  }
+  .grid-cuadros-small .grid-item:nth-child(2) {
+    animation-delay: 0.75s;
+  }
+  .grid-cuadros-small .grid-item:nth-child(3) {
+    animation-delay: 0.9s;
+  }
+  .grid-cuadros-small .grid-item:nth-child(4) {
+    animation-delay: 1.05s;
+  }
+
+  .grid-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+  }
+
+  .grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .grid-item:hover img {
+    transform: scale(1.12);
+  }
+
+  /* BOTÓN */
+  .flex-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 1.2s forwards;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .hero-image {
+      aspect-ratio: 4/3;
+    }
+
+    .grid-cuadros-small {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-overlay h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .preview-cuadros {
+      padding: 4rem 1.5rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-image {
+      aspect-ratio: 1/1;
+      border-radius: 8px;
+    }
+
+    .hero-overlay {
+      padding: 2rem 1.5rem;
+    }
+
+    .hero-overlay h3 {
+      font-size: 1.3rem;
+    }
+
+    .grid-cuadros-small {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    /* En mobile, que aparezcan más rápido */
+    .grid-cuadros-small .grid-item:nth-child(1) {
+      animation-delay: 0.3s;
+    }
+    .grid-cuadros-small .grid-item:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    .grid-cuadros-small .grid-item:nth-child(3) {
+      animation-delay: 0.5s;
+    }
+    .grid-cuadros-small .grid-item:nth-child(4) {
+      animation-delay: 0.6s;
+    }
+  }
+
+  /* Animación fade in desde arriba */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Animación fade in desde abajo */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>

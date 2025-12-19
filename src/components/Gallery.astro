@@ -27,28 +27,28 @@ import obras from '../data/obras.json';
 
       <!-- 4 CUADROS GRID -->
       <div class='grid-cuadros-small'>
-        <div class='grid-item animate-on-scroll'>
+        <div class='grid-item animate-item'>
           <img
             src='/images/cuadros/cuadros_08.webp'
             alt='Cuadro 2'
             loading='lazy'
           />
         </div>
-        <div class='grid-item animate-on-scroll'>
+        <div class='grid-item animate-item'>
           <img
             src='/images/cuadros/cuadros_19.webp'
             alt='Cuadro 3'
             loading='lazy'
           />
         </div>
-        <div class='grid-item animate-on-scroll'>
+        <div class='grid-item animate-item'>
           <img
             src='/images/cuadros/cuadros_18.webp'
             alt='Cuadro 4'
             loading='lazy'
           />
         </div>
-        <div class='grid-item animate-on-scroll'>
+        <div class='grid-item animate-item'>
           <img
             src='/images/cuadros/cuadros_10.webp'
             alt='Cuadro 5'
@@ -71,16 +71,16 @@ import obras from '../data/obras.json';
       </h2>
 
       <div class='grid-tejas'>
-        <div class='grid-item grid-item--vertical animate-on-scroll'>
+        <div class='grid-item grid-item--vertical animate-item'>
           <img src='/images/tejas/tejas_14.webp' alt='Teja 1' loading='lazy' />
         </div>
-        <div class='grid-item grid-item--vertical animate-on-scroll'>
+        <div class='grid-item grid-item--vertical animate-item'>
           <img src='/images/tejas/tejas_13.webp' alt='Teja 2' loading='lazy' />
         </div>
-        <div class='grid-item grid-item--vertical animate-on-scroll'>
+        <div class='grid-item grid-item--vertical animate-item'>
           <img src='/images/tejas/tejas_16.webp' alt='Teja 3' loading='lazy' />
         </div>
-        <div class='grid-item grid-item--vertical animate-on-scroll'>
+        <div class='grid-item grid-item--vertical animate-item'>
           <img src='/images/tejas/tejas_17.webp' alt='Teja 4' loading='lazy' />
         </div>
       </div>
@@ -96,42 +96,42 @@ import obras from '../data/obras.json';
       <h2 class='section-title'>Cuadritos con Frases</h2>
 
       <div class='grid-frases'>
-        <div class='grid-item animate-on-scroll'>
+        <div class='grid-item animate-item'>
           <img
             src='/images/frases/frases_01.webp'
             alt='Frase 1'
             loading='lazy'
           />
         </div>
-        <div class='grid-item animate-on-scroll'>
+        <div class='grid-item animate-item'>
           <img
             src='/images/frases/frases_13.webp'
             alt='Frase 2'
             loading='lazy'
           />
         </div>
-        <div class='grid-item animate-on-scroll'>
+        <div class='grid-item animate-item'>
           <img
             src='/images/frases/frases_15.webp'
             alt='Frase 3'
             loading='lazy'
           />
         </div>
-        <div class='grid-item animate-on-scroll'>
+        <div class='grid-item animate-item'>
           <img
             src='/images/frases/frases_16.webp'
             alt='Frase 4'
             loading='lazy'
           />
         </div>
-        <div class='grid-item animate-on-scroll'>
+        <div class='grid-item animate-item'>
           <img
             src='/images/frases/frases_19.webp'
             alt='Frase 5'
             loading='lazy'
           />
         </div>
-        <div class='grid-item animate-on-scroll'>
+        <div class='grid-item animate-item'>
           <img
             src='/images/frases/frases_20.webp'
             alt='Frase 6'
@@ -150,27 +150,39 @@ import obras from '../data/obras.json';
 
 <FullGalleryModal obras={obras} />
 
-<script is:inline>
-  // Esperar a que el DOM esté completamente cargado
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  // Registrar el plugin ScrollTrigger
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Esperar a que el DOM esté listo
   document.addEventListener('DOMContentLoaded', function () {
-    // Intersection Observer para animar elementos al scroll
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -10% 0px',
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, observerOptions);
-
-    // Observar todos los elementos con la clase animate-on-scroll
-    const elements = document.querySelectorAll('.animate-on-scroll');
-    elements.forEach((el) => {
-      observer.observe(el);
+    // Animar todos los elementos con clase animate-item
+    gsap.utils.toArray('.animate-item').forEach((item) => {
+      gsap.fromTo(
+        item as any,
+        {
+          opacity: 0,
+          y: 100,
+          scale: 0.7,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.6,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: item as Element,
+            start: 'top 80%',
+            end: 'top -30%',
+            toggleActions: 'play reverse play reverse',
+            //markers: true
+          },
+        },
+      );
     });
   });
 </script>
@@ -201,6 +213,7 @@ import obras from '../data/obras.json';
   .preview-frases {
     margin: 5rem 6rem 1rem 6rem;
   }
+
   /* =========================
    TÍTULOS
 ========================= */
@@ -298,21 +311,21 @@ import obras from '../data/obras.json';
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   .grid-frases {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
 
   /* 4 cuadros chicos (rectangulares) */
   .grid-cuadros-small {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 4rem;
+    gap: 2rem;
   }
 
   /* =========================
@@ -358,22 +371,6 @@ import obras from '../data/obras.json';
   /* rectangulares (cuadros chicos) */
   .grid-cuadros-small .grid-item {
     aspect-ratio: 4 / 3;
-  }
-
-  /* =========================
-   ANIMACIÓN ON SCROLL
-========================= */
-  .animate-on-scroll {
-    opacity: 0;
-    transform: translateY(100px) scale(0.7);
-    transition:
-      opacity 0.6s ease-out,
-      transform 0.6s ease-out;
-  }
-
-  .animate-on-scroll.visible {
-    opacity: 1;
-    transform: translateY(0) scale(1);
   }
 
   /* =========================
@@ -449,7 +446,7 @@ import obras from '../data/obras.json';
   @keyframes fadeInUp {
     from {
       opacity: 0;
-      transform: translateY(10px);
+      transform: translateY(20px);
     }
     to {
       opacity: 1;
@@ -460,7 +457,7 @@ import obras from '../data/obras.json';
   @keyframes revealFromScale {
     from {
       opacity: 0;
-      transform: scale(0.98);
+      transform: scale(0.95);
     }
     to {
       opacity: 1;

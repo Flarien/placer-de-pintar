@@ -217,6 +217,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 - Diseño inspirado en portfolios minimalistas de Behance y Dribbble
 - Tipografía Georgia por su elegancia clásica
 - Paleta de colores tierra que complementa las obras de arte
+- Íconos de contacto: [@icons8](https://icons8.com) 
 
 ---
 

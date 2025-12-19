@@ -1,0 +1,643 @@
+---
+
+// src/components/FullGalleryModal.astro
+interface Obra {
+  id: number;
+  title: string;
+  category: string;
+  technique: string;
+  image: string;
+}
+
+interface Props {
+  obras: Obra[];
+}
+
+const { obras } = Astro.props;
+
+// Filtrar por categoría
+const cuadros = obras.filter(o => o.category === 'cuadros');
+const tejas = obras.filter(o => o.category === 'tejas');
+const murales = obras.filter(o => o.category === 'murales');
+const frases = obras.filter(o => o.category === 'frases');
+const varios = obras.filter(o => o.category === 'varios');
+
+const categories = [
+  { id: 'cuadros', label: 'Cuadros', obras: cuadros },
+  { id: 'tejas', label: 'Tejas', obras: tejas },
+  { id: 'murales', label: 'Murales', obras: murales },
+  { id: 'frases', label: 'Frases', obras: frases },
+  { id: 'varios', label: 'Varios', obras: varios },
+];
+---
+
+<!-- Modal Principal -->
+<div class="full-gallery-modal" id="fullGalleryModal">
+  <div class="modal-overlay"></div>
+  
+  <div class="modal-container">
+    <!-- Header con tabs -->
+    <div class="modal-header">
+      <button class="modal-close" aria-label="Cerrar galería">×</button>
+      
+      <nav class="category-tabs">
+        {categories.map((cat, index) => (
+          <button 
+            class={`tab-btn ${index === 0 ? 'active' : ''}`}
+            data-category={cat.id}
+          >
+            {cat.label}
+            <span class="tab-count">({cat.obras.length})</span>
+          </button>
+        ))}
+      </nav>
+    </div>
+
+    <!-- Contenido de cada categoría -->
+    <div class="modal-content">
+      {categories.map((cat, index) => (
+        <div 
+          class={`gallery-grid-container ${index === 0 ? 'active' : ''}`}
+          data-category-content={cat.id}
+        >
+          <div class="gallery-grid">
+            {cat.obras.map((obra) => (
+              <div class="gallery-item" data-obra-id={obra.id}>
+                <img 
+                  src={obra.image} 
+                  alt={obra.title}
+                  loading="lazy"
+                />
+                <div class="item-overlay">
+                  <h3>{obra.title}</h3>
+                  <p>{obra.technique}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<!-- Modal de detalle de obra individual -->
+<div class="obra-detail-modal" id="obraDetailModal">
+  <div class="detail-overlay"></div>
+  <div class="detail-container">
+    <button class="detail-close" aria-label="Cerrar detalle">×</button>
+    
+    <div class="detail-content">
+      <div class="detail-image">
+        <img id="detailImage" src="" alt="" />
+      </div>
+      <div class="detail-info">
+        <h2 id="detailTitle"></h2>
+        <p id="detailTechnique"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Modal Principal */
+  .full-gallery-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .full-gallery-modal.active {
+    display: block;
+    opacity: 1;
+  }
+
+  .modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--accent);
+    backdrop-filter: blur(5px);
+  }
+
+  .modal-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header con tabs */
+  .modal-header {
+    position: relative;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    animation: slideDown 0.4s ease-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .modal-close {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: var(--primary);
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+  }
+
+  .modal-close:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transform: translateY(-50%) rotate(90deg);
+  }
+
+  .category-tabs {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tab-btn {
+    padding: 0.8rem 1.5rem;
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    font-family: 'Georgia', serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .tab-count {
+    font-size: 0.85rem;
+    opacity: 0.7;
+  }
+
+  .tab-btn:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .tab-btn.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+  }
+
+  /* Contenido del modal */
+  .modal-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 3rem 2rem;
+    position: relative;
+  }
+
+  .gallery-grid-container {
+    display: none;
+    animation: fadeIn 0.4s ease-out;
+  }
+
+  .gallery-grid-container.active {
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .gallery-item {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    cursor: pointer;
+    background: #f5f5f5;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.08);
+  }
+
+  .item-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+    color: white;
+    padding: 2rem 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item:hover .item-overlay {
+    transform: translateY(0);
+  }
+
+  .item-overlay h3 {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 0.3rem;
+  }
+
+  .item-overlay p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+
+  /* Modal de detalle de obra */
+  .obra-detail-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .obra-detail-modal.active {
+    display: flex;
+    opacity: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .detail-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+  }
+
+  .detail-container {
+    position: relative;
+    max-width: 1200px;
+    max-height: 90vh;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    gap: 2rem;
+    animation: scaleIn 0.3s ease-out;
+  }
+
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .detail-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: white;
+    border: none;
+    font-size: 2rem;
+    color: var(--primary);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 10;
+    transition: all 0.3s ease;
+  }
+
+  .detail-close:hover {
+    transform: scale(1.1) rotate(90deg);
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  .detail-content {
+    display: flex;
+    width: 100%;
+  }
+
+  .detail-image {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: #f5f5f5;
+  }
+
+  .detail-image img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+
+  .detail-info {
+    flex: 1;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .detail-info h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .detail-info p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .modal-header {
+      padding: 1rem;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .modal-close {
+      position: static;
+      transform: none;
+      margin-left: auto;
+    }
+
+    .category-tabs {
+      width: 100%;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      padding-bottom: 0.5rem;
+    }
+
+    .tab-btn {
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+
+    .modal-content {
+      padding: 1.5rem 1rem;
+    }
+
+    .gallery-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .detail-container {
+      flex-direction: column;
+      max-height: 95vh;
+      overflow-y: auto;
+    }
+
+    .detail-image {
+      padding: 1rem;
+    }
+
+    .detail-info {
+      padding: 2rem 1.5rem;
+    }
+
+    .detail-info h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* Scrollbar personalizado */
+  .modal-content::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .modal-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .modal-content::-webkit-scrollbar-thumb {
+    background: rgba(139, 111, 71, 0.5);
+    border-radius: 5px;
+  }
+
+  .modal-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(139, 111, 71, 0.8);
+  }
+</style>
+
+<script>
+  // Interfaces para TypeScript
+  interface ObraData {
+    id: number;
+    title: string;
+    category: string;
+    technique: string;
+    image: string;
+  }
+
+  // Elementos del DOM
+  const fullGalleryModal = document.getElementById('fullGalleryModal');
+  const obraDetailModal = document.getElementById('obraDetailModal');
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const categoryContents = document.querySelectorAll('.gallery-grid-container');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  
+  // Cerrar modales
+  const modalClose = document.querySelector('.modal-close');
+  const detailClose = document.querySelector('.detail-close');
+  const modalOverlay = document.querySelector('.modal-overlay');
+  const detailOverlay = document.querySelector('.detail-overlay');
+
+  // Datos de obras (pasados desde el componente)
+  let obrasData: ObraData[] = [];
+
+  // Función para abrir el modal de galería completa
+  function openFullGallery(category?: string) {
+    if (fullGalleryModal) {
+      fullGalleryModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+
+      // Si se especifica una categoría, activar ese tab
+      if (category) {
+        switchTab(category);
+      }
+    }
+  }
+
+  // Función para cerrar el modal de galería
+  function closeFullGallery() {
+    if (fullGalleryModal) {
+      fullGalleryModal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  // Función para cambiar de tab
+  function switchTab(categoryId: string) {
+    // Actualizar botones
+    tabButtons.forEach(btn => {
+      if (btn.getAttribute('data-category') === categoryId) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    // Actualizar contenido
+    categoryContents.forEach(content => {
+      if (content.getAttribute('data-category-content') === categoryId) {
+        content.classList.add('active');
+      } else {
+        content.classList.remove('active');
+      }
+    });
+  }
+
+  // Event listeners para tabs
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const category = btn.getAttribute('data-category');
+      if (category) {
+        switchTab(category);
+      }
+    });
+  });
+
+  // Abrir modal de detalle de obra
+  galleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const obraId = parseInt(item.getAttribute('data-obra-id') || '0');
+      openObraDetail(obraId);
+    });
+  });
+
+  function openObraDetail(obraId: number) {
+    // Buscar la obra en el array (necesitarás pasar esto desde Astro)
+    const obraElement = document.querySelector(`[data-obra-id="${obraId}"]`);
+    if (!obraElement || !obraDetailModal) return;
+
+    const img = obraElement.querySelector('img');
+    const title = obraElement.querySelector('h3')?.textContent || '';
+    const technique = obraElement.querySelector('p')?.textContent || '';
+
+    // Actualizar modal de detalle
+    const detailImage = document.getElementById('detailImage') as HTMLImageElement;
+    const detailTitle = document.getElementById('detailTitle');
+    const detailTechnique = document.getElementById('detailTechnique');
+
+    if (detailImage && img) detailImage.src = img.src;
+    if (detailTitle) detailTitle.textContent = title;
+    if (detailTechnique) detailTechnique.textContent = technique;
+
+    obraDetailModal.classList.add('active');
+  }
+
+  function closeObraDetail() {
+    if (obraDetailModal) {
+      obraDetailModal.classList.remove('active');
+    }
+  }
+
+  // Event listeners para cerrar
+  modalClose?.addEventListener('click', closeFullGallery);
+  modalOverlay?.addEventListener('click', closeFullGallery);
+  detailClose?.addEventListener('click', closeObraDetail);
+  detailOverlay?.addEventListener('click', closeObraDetail);
+
+  // Cerrar con ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (obraDetailModal?.classList.contains('active')) {
+        closeObraDetail();
+      } else if (fullGalleryModal?.classList.contains('active')) {
+        closeFullGallery();
+      }
+    }
+  });
+
+  // Exponer función globalmente para poder llamarla desde otros componentes
+  (window as any).openFullGallery = openFullGallery;
+</script>

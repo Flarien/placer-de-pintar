@@ -23,6 +23,7 @@ Portfolio web minimalista y elegante para la artista plástica **Norma Luján Br
 
 - [Astro](https://astro.build) - Framework para sitios estáticos
 - HTML5 / CSS3 (Grid, Flexbox, Custom Properties)
+- GSAP - Librería para animaciones
 - JavaScript Vanilla (Intersection Observer API)
 - Tipografía: Georgia (serif)
 
@@ -31,22 +32,23 @@ Portfolio web minimalista y elegante para la artista plástica **Norma Luján Br
 ```
 portfolio-norma/
 ├── public/
-│   ├── images/               # Imágenes de las obras
+│   ├── images/                     # Imágenes de las obras
 │   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   ├── Header.astro      # Navegación principal
-│   │   ├── Hero.astro        # Hero section
-│   │   ├── Gallery.astro     # Galería con filtros
-│   │   ├── About.astro       # Biografía
-│   │   ├── Contact.astro     # Información de contacto
-│   │   └── Footer.astro      # Footer
-│   ├── layouts/
-│   │   └── Layout.astro      # Layout base
-│   ├── pages/
-│   │   └── index.astro       # Página principal
-│   └── data/
-│       └── obras.json        # (opcional) Datos de obras
+│   │   ├── Hero.astro              # Hero section
+│   │   ├── Gallery.astro           # Galería con filtros
+│   │   ├── FullGalleryModal.astro  # Modal con galería completa
+│   │   ├── About.astro             # Biografía
+│   │   └── Contact.astro           # Información de contacto
+│   ├── layouts/       
+│   │   ├── Header.astro            # Navegación principal
+│   │   ├── Footer.astro            # Footer
+│   │   └── Layout.astro            # Layout base
+│   ├── pages/       
+│   │   └── index.astro             # Página principal
+│   └── data/      
+│       └── obras.json              # Datos de obras
 └── package.json
 ```
 
@@ -155,37 +157,7 @@ body {
 
 Si usás Google Fonts, agregar en `<head>` del Layout.
 
-## 🚀 Deployment
 
-### Netlify
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start)
-
-```bash
-npm run build
-# Subir carpeta /dist a Netlify
-```
-
-### Vercel
-
-```bash
-npm install -g vercel
-vercel
-```
-
-### Cloudflare Pages
-
-1. Conectar repositorio de GitHub
-2. Build command: `npm run build`
-3. Output directory: `dist`
-
-## 📸 Screenshots
-
-### Desktop
-![Desktop View](screenshots/desktop.png)
-
-### Mobile
-![Mobile View](screenshots/mobile.png)
 
 ## 🤝 Contribuciones
 

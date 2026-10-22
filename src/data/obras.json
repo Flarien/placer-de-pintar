@@ -372,10 +372,10 @@
   },  
   {
     "id": 54,
-    "title": "",
-    "category": "",
-    "technique": "",
-    "image": ""
+    "title": "Granja con fondo de montañas",
+    "category": "cuadros",
+    "technique": "Pintura de tela sobre lienzo",
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792703783/Web%20Placer%20de%20Pintar/cuadros/cuadros_28_mhxa2w.webp"
   },  
   {
     "id": 55,
@@ -386,97 +386,139 @@
   },  
   {
     "id": 56,
-    "title": "",
-    "category": "",
-    "technique": "",
-    "image": ""
+    "title": "Árbol familiar",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792703781/Web%20Placer%20de%20Pintar/cuadros/cuadros_29_k9umzj.webp"
   },  
   {
     "id": 57,
-    "title": "",
-    "category": "",
-    "technique": "",
-    "image": ""
+    "title": "Caballos salvajes",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792703782/Web%20Placer%20de%20Pintar/cuadros/cuadros_30_z7gjrz.webp"
   },  
   {
     "id": 58,
-    "title": "",
-    "category": "",
-    "technique": "",
-    "image": ""
+    "title": "Árbol de la Vida Namasté",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792703785/Web%20Placer%20de%20Pintar/cuadros/cuadros_31_bjd3ay.webp"
   },  
   {
     "id": 59,
-    "title": "",
-    "category": "",
-    "technique": "",
-    "image": ""
+    "title": "Sobre la tranquera",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792704494/Web%20Placer%20de%20Pintar/cuadros/cuadros_32_hzqzep.webp"
   },  
   {
-    "id": 61,
+    "id": 60,
     "title": "",
     "category": "",
     "technique": "",
     "image": ""
+  },
+  {
+    "id": 61,
+    "title": "Pasaje europeo",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792704499/Web%20Placer%20de%20Pintar/cuadros/cuadros_33_obn3k3.webp"
   },  
   {
     "id": 62,
-    "title": "",
-    "category": "",
-    "technique": "",
-    "image": ""
+    "title": "Tarde de Veleros",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792704501/Web%20Placer%20de%20Pintar/cuadros/cuadros_34_oeidfq.webp"
   },  
   {
     "id": 63,
-    "title": "",
-    "category": "",
-    "technique": "",
-    "image": ""
+    "title": "Esperando a su dueño",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792704492/Web%20Placer%20de%20Pintar/cuadros/cuadros_35_exw1bn.webp"
   },  
   {
     "id": 64,
-    "title": "",
-    "category": "",
-    "technique": "",
-    "image": ""
+    "title": "Gotas sobre la hoja",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792703795/Web%20Placer%20de%20Pintar/cuadros/cuadros_36_uakfsd.webp"
   },  
   {
     "id": 65,
-    "title": "",
-    "category": "",
-    "technique": "",
-    "image": ""
+    "title": "Paisaje Otoñal",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792704524/Web%20Placer%20de%20Pintar/cuadros/cuadros_37_fi3pj0.webp"
   },  
   {
     "id": 66,
-    "title": "",
-    "category": "",
-    "technique": "",
-    "image": ""
+    "title": "Atardecer en el campo",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792704506/Web%20Placer%20de%20Pintar/cuadros/cuadros_38_z0c6k8.webp"
   }, 
   {
     "id": 67,
-    "title": "",
-    "category": "",
-    "technique": "",
-    "image": ""
+    "title": "Reflejos en los Alpes",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792704509/Web%20Placer%20de%20Pintar/cuadros/cuadros_40_tojqrp.webp"
   },
   {
     "id": 68,
-    "title": "",
-    "category": "",
-    "technique": "",
-    "image": ""
+    "title": "Alelís",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792704515/Web%20Placer%20de%20Pintar/cuadros/cuadros_41_kp4yht.webp"
   },
   {
     "id": 69,
-    "title": "",
-    "category": "",
-    "technique": "",
-    "image": ""
+    "title": "Buscando la sombra",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792704517/Web%20Placer%20de%20Pintar/cuadros/cuadros_42_uv4izh.webp"
   },
   {
     "id": 70,
+    "title": "Leopardo descansando",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792703792/Web%20Placer%20de%20Pintar/cuadros/cuadros_43_xp6szl.webp"
+  },
+  {
+    "id": 71,
+    "title": "Angel",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792704521/Web%20Placer%20de%20Pintar/cuadros/cuadros_44_mwt1z0.webp"
+  },
+  {
+    "id": 72,
+    "title": "Estación tren Otamendi",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792703980/Web%20Placer%20de%20Pintar/cuadros/cuadros_45_foy90y.webp"
+  },
+  {
+    "id": 73,
+    "title": "Tríptico paisaje lago",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792703981/Web%20Placer%20de%20Pintar/cuadros/cuadros_46_wbl75d.webp"
+  },
+  {
+    "id": 74,
+    "title": "Descanso",
+    "category": "cuadros",
+    "technique": "Acrílico sobre fibrofacil",
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792704492/Web%20Placer%20de%20Pintar/cuadros/cuadros_47_em27fs.webp"
+  },
+  {
+    "id": 75,
     "title": "",
     "category": "",
     "technique": "",

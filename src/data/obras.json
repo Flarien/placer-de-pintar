@@ -4,370 +4,482 @@
     "title": "Cuadro Gato",
     "category": "cuadros",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/cuadros/cuadros_01.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702537/Web%20Placer%20de%20Pintar/cuadros/cuadros_01_alwmhr.webp"
   },
   {
     "id": 2,
     "title": "Cuadro Gatos Xinjiang",
     "category": "cuadros",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/cuadros/cuadros_04.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702538/Web%20Placer%20de%20Pintar/cuadros/cuadros_04_oixpxs.webp"
   },
   {
     "id": 3,
     "title": "Cuadro leopardo",
     "category": "cuadros",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/cuadros/cuadros_05.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702540/Web%20Placer%20de%20Pintar/cuadros/cuadros_05_syubn5.webp"
   },
   {
     "id": 4,
     "title": "Cuadro Caballo Alazan",
     "category": "cuadros",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/cuadros/cuadros_06.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702539/Web%20Placer%20de%20Pintar/cuadros/cuadros_06_hwk29i.webp"
   },
   {
     "id": 5,
     "title": "Cuadro Caballo Palomino",
     "category": "cuadros",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/cuadros/cuadros_08.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702540/Web%20Placer%20de%20Pintar/cuadros/cuadros_08_tow4eo.webp"
   },
   {
     "id": 6,
     "title": "Cuadro Andy (perro ovejero alemán)",
     "category": "cuadros",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/cuadros/cuadros_09.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702542/Web%20Placer%20de%20Pintar/cuadros/cuadros_09_txmzt8.webp"
   },
   {
     "id": 7,
     "title": "Cuadro atardecer",
     "category": "cuadros",
     "technique": "Acrílico sobre bastidor de tela",
-    "image": "/images/cuadros/cuadros_10.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702541/Web%20Placer%20de%20Pintar/cuadros/cuadros_10_n7ryip.webp"
   },
   {
     "id": 8,
     "title": "Cuadro negra con cacharros",
     "category": "cuadros",
     "technique": "Acrílico sobre bastidor de madera",
-    "image": "/images/cuadros/cuadros_11.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702544/Web%20Placer%20de%20Pintar/cuadros/cuadros_11_vbc1cy.webp"
   },
   {
     "id": 9,
     "title": "Cuadro Tigre",
     "category": "cuadros",
     "technique": "Acrílico sobre bastidor de madera",
-    "image": "/images/cuadros/cuadros_12.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702544/Web%20Placer%20de%20Pintar/cuadros/cuadros_12_mmmotz.webp"
   },
   {
     "id": 10,
     "title": "Cuadro Caballo Blanco",
     "category": "cuadros",
     "technique": "Acrílico sobre bastidor de madera",
-    "image": "/images/cuadros/cuadros_13.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702544/Web%20Placer%20de%20Pintar/cuadros/cuadros_13_tl2zce.webp"
   },
   {
     "id": 11,
     "title": "Cuadro Pareja 1",
     "category": "cuadros",
     "technique": "Acrílico sobre bastidor de tela",
-    "image": "/images/cuadros/cuadros_16.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702546/Web%20Placer%20de%20Pintar/cuadros/cuadros_16_k97obi.webp"
   },
   {
     "id": 12,
     "title": "Cuadro Pareja 2",
     "category": "cuadros",
     "technique": "Acrílico sobre bastidor de tela",
-    "image": "/images/cuadros/cuadros_17.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702548/Web%20Placer%20de%20Pintar/cuadros/cuadros_17_ifmfjq.webp"
   },
   {
     "id": 13,
     "title": "Cuadro Amapolas naranjas",
     "category": "cuadros",
     "technique": "Acrílico sobre bastidor de madera",
-    "image": "/images/cuadros/cuadros_18.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702548/Web%20Placer%20de%20Pintar/cuadros/cuadros_18_s1oawu.webp"
   },
   {
     "id": 14,
     "title": "Cuadro paisaje campestre",
     "category": "cuadros",
     "technique": "Acrílico sobre bastidor de madera",
-    "image": "/images/cuadros/cuadros_19.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702549/Web%20Placer%20de%20Pintar/cuadros/cuadros_19_kvumze.webp"
   },
   {
     "id": 15,
     "title": "Cuadro Mandala 1",
     "category": "cuadros",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/cuadros/cuadros_20.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702550/Web%20Placer%20de%20Pintar/cuadros/cuadros_20_p4lrrz.webp"
   },
   {
     "id": 16,
     "title": "Cuadro Mandala 2",
     "category": "cuadros",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/cuadros/cuadros_23.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702551/Web%20Placer%20de%20Pintar/cuadros/cuadros_23_dkna8r.webp"
   },
   {
     "id": 17,
     "title": "Cuadro Flores moradas",
     "category": "cuadros",
     "technique": "Acrílico sobre bastidor de madera",
-    "image": "/images/cuadros/cuadros_24.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702551/Web%20Placer%20de%20Pintar/cuadros/cuadros_24_orqvae.webp"
   },
   {
     "id": 18,
     "title": "Cuadro Paisaje marítimo",
     "category": "cuadros",
     "technique": "Acrílico sobre bastidor de madera",
-    "image": "/images/cuadros/cuadros_26.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702554/Web%20Placer%20de%20Pintar/cuadros/cuadros_26_zkk8vb.webp"
   },
   {
     "id": 19,
     "title": "Cuadro Ganesha",
     "category": "cuadros",
     "technique": "Acrílico sobre placa metálica",
-    "image": "/images/cuadros/cuadros_27.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702555/Web%20Placer%20de%20Pintar/cuadros/cuadros_27_fru3sb.webp"
   },
   {
     "id": 20,
     "title": "Frases Motivacionales",
     "category": "frases",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/frases/frases_01.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702513/Web%20Placer%20de%20Pintar/frases/frases_01_t3qoqd.webp"
   },
   {
     "id": 21,
     "title": "Frases Motivacionales",
     "category": "frases",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/frases/frases_02.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702511/Web%20Placer%20de%20Pintar/frases/frases_02_wnr4ew.webp"
   },
   {
     "id": 22,
     "title": "Frases Motivacionales",
     "category": "frases",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/frases/frases_06.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702512/Web%20Placer%20de%20Pintar/frases/frases_06_negjup.webp"
   },
   {
     "id": 23,
     "title": "Frases Motivacionales",
     "category": "frases",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/frases/frases_11.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702512/Web%20Placer%20de%20Pintar/frases/frases_11_vkjzc7.webp"
   },
   {
     "id": 24,
     "title": "Frases Motivacionales",
     "category": "frases",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/frases/frases_12.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702513/Web%20Placer%20de%20Pintar/frases/frases_12_lkgrwf.webp"
   },
   {
     "id": 25,
     "title": "Frases Motivacionales",
     "category": "frases",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/frases/frases_13.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702514/Web%20Placer%20de%20Pintar/frases/frases_13_xvmvhw.webp"
   },
   {
     "id": 26,
     "title": "Frases Motivacionales",
     "category": "frases",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/frases/frases_17.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702518/Web%20Placer%20de%20Pintar/frases/frases_17_eps4q3.webp"
   },
   {
     "id": 27,
     "title": "Frases Motivacionales",
     "category": "frases",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/frases/frases_19.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702517/Web%20Placer%20de%20Pintar/frases/frases_19_ylwz4v.webp"
   },
   {
     "id": 28,
     "title": "Frases Motivacionales",
     "category": "frases",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/frases/frases_20.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702518/Web%20Placer%20de%20Pintar/frases/frases_20_pvpbi7.webp"
   },
   {
     "id": 29,
     "title": "Frases Motivacionales",
     "category": "frases",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/frases/frases_21.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702518/Web%20Placer%20de%20Pintar/frases/frases_21_ohvw5q.webp"
   },
   {
     "id": 30,
     "title": "Frases Motivacionales",
     "category": "frases",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/frases/frases_25.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702520/Web%20Placer%20de%20Pintar/frases/frases_25_xsptaj.webp"
   },
   {
     "id": 31,
     "title": "Frases Motivacionales",
     "category": "frases",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/frases/frases_27.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702521/Web%20Placer%20de%20Pintar/frases/frases_27_vgeuiy.webp"
   },
   {
     "id": 32,
     "title": "Frases Motivacionales",
     "category": "frases",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/frases/frases_28.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702522/Web%20Placer%20de%20Pintar/frases/frases_28_os9sol.webp"
   },
   {
     "id": 33,
     "title": "Frases Motivacionales",
     "category": "frases",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/frases/frases_29.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702522/Web%20Placer%20de%20Pintar/frases/frases_29_cdyoey.webp"
   },
   {
     "id": 34,
     "title": "Frases Motivacionales",
     "category": "frases",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/frases/frases_30.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702523/Web%20Placer%20de%20Pintar/frases/frases_30_qaxogf.webp"
   },
   {
     "id": 35,
     "title": "Frases Motivacionales",
     "category": "frases",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/frases/frases_31.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702524/Web%20Placer%20de%20Pintar/frases/frases_31_uez9u4.webp"
   },
   {
     "id": 36,
     "title": "Frases Motivacionales",
     "category": "frases",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/frases/frases_32.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702525/Web%20Placer%20de%20Pintar/frases/frases_32_eyg3yw.webp"
   },
   {
     "id": 37,
     "title": "Frases Motivacionales",
     "category": "frases",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/frases/frases_33.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702525/Web%20Placer%20de%20Pintar/frases/frases_33_d9adlp.webp"
   },
   {
     "id": 38,
     "title": "Frases Motivacionales",
     "category": "frases",
     "technique": "Acrílico sobre fibrofacil",
-    "image": "/images/frases/frases_34.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702526/Web%20Placer%20de%20Pintar/frases/frases_34_hom226.webp"
   },
   {
     "id": 39,
     "title": "Tejas varias",
     "category": "tejas",
     "technique": "Tejas Coloniales Pintadas a Mano",
-    "image": "/images/tejas/tejas_01.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792697657/Web%20Placer%20de%20Pintar/tejas/tejas_01_moynb2.webp"
   },
   {
     "id": 40,
     "title": "Árboles",
     "category": "tejas",
     "technique": "Tejas Coloniales Pintadas a Mano",
-    "image": "/images/tejas/tejas_02.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792697657/Web%20Placer%20de%20Pintar/tejas/tejas_02_yp5yla.webp"
   },
   {
     "id": 41,
     "title": "Pareja de gatos",
     "category": "tejas",
     "technique": "Tejas Coloniales Pintadas a Mano",
-    "image": "/images/tejas/tejas_03.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792697657/Web%20Placer%20de%20Pintar/tejas/tejas_03_vfk5ft.webp"
   },
   {
     "id": 42,
     "title": "Paisaje naif",
     "category": "tejas",
     "technique": "Tejas Coloniales Pintadas a Mano",
-    "image": "/images/tejas/tejas_04.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792697660/Web%20Placer%20de%20Pintar/tejas/tejas_04_aydgjx.webp"
   },
   {
     "id": 43,
     "title": "Teja con calle y num de casa",
     "category": "tejas",
     "technique": "Tejas Coloniales Pintadas a Mano",
-    "image": "/images/tejas/tejas_05.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792697661/Web%20Placer%20de%20Pintar/tejas/tejas_05_ve5vdc.webp"
   },
   {
     "id": 44,
     "title": "Cosmos y colibrí",
     "category": "tejas",
     "technique": "Tejas Coloniales Pintadas a Mano",
-    "image": "/images/tejas/tejas_06.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792697657/Web%20Placer%20de%20Pintar/tejas/tejas_06_vdv4jf.webp"
   },
   {
     "id": 45,
     "title": "Luces en el bosque",
     "category": "tejas",
     "technique": "Tejas Coloniales Pintadas a Mano",
-    "image": "/images/tejas/tejas_07.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792697658/Web%20Placer%20de%20Pintar/tejas/tejas_07_ru0sws.webp"
   },
   {
     "id": 46,
     "title": "Libelulas",
     "category": "tejas",
     "technique": "Tejas Coloniales Pintadas a Mano",
-    "image": "/images/tejas/tejas_08.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792697716/Web%20Placer%20de%20Pintar/tejas/tejas_08_n6rila.webp"
   },
   {
     "id": 47,
     "title": "Gatito travieso",
     "category": "varios",
     "technique": "Acrilico + decoupage en caja de madera",
-    "image": "/images/varios/varios_01_caja.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702577/Web%20Placer%20de%20Pintar/varios/varios_01_caja_tajlv8.webp"
   },
   {
     "id": 48,
     "title": "Jarrón decorativo",
     "category": "varios",
     "technique": "Acrílico sobre jarrón de cerámica",
-    "image": "/images/varios/varios_03_jarron.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702575/Web%20Placer%20de%20Pintar/varios/varios_03_jarron_lhjoz7.webp"
   },
   {
     "id": 49,
     "title": "Jarrónes decorativos",
     "category": "varios",
     "technique": "Acrílico sobre jarrón de cerámica",
-    "image": "/images/varios/varios_09_jarron.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702581/Web%20Placer%20de%20Pintar/varios/varios_09_jarron_c3h4ln.webp"
   },
   {
     "id": 50,
     "title": "Mosaiquismo 1",
     "category": "varios",
     "technique": "Mosaiquismo",
-    "image": "/images/varios/varios_05_mosaiquismo.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702580/Web%20Placer%20de%20Pintar/varios/varios_05_mosaiquismo_mpnnmi.webp"
   },
   {
     "id": 51,
     "title": "Mosaiquismo 2",
     "category": "varios",
     "technique": "Mosaiquismo",
-    "image": "/images/varios/varios_11_mosaiquismo.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702583/Web%20Placer%20de%20Pintar/varios/varios_11_mosaiquismo_rqnb80.webp"
   },
   {
     "id": 52,
     "title": "Casitas decorativas porta llaves",
     "category": "varios",
     "technique": "Acrílico sobre madera. Técnicas de recuperación de carpintería",
-    "image": "/images/varios/varios_16_ganchos.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702588/Web%20Placer%20de%20Pintar/varios/varios_16_ganchos_zmbeqf.webp"
   },
   {
     "id": 53,
     "title": "Cuadro Caballo Negro",
     "category": "cuadros",
     "technique": "Acrílico sobre bastidor de madera",
-    "image": "/images/cuadros/cuadros_14.webp"
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792702586/Web%20Placer%20de%20Pintar/varios/varios_14_ganchos_x1xylq.webp"
+  },  
+  {
+    "id": 54,
+    "title": "",
+    "category": "",
+    "technique": "",
+    "image": ""
+  },  
+  {
+    "id": 55,
+    "title": "Par tejas paisajes noche / día primavera",
+    "category": "tejas",
+    "technique": "Tejas Coloniales Pintadas a Mano",
+    "image": "https://res.cloudinary.com/dciovdqaf/image/upload/v1792697836/Web%20Placer%20de%20Pintar/tejas/tejas_09_fc9nav.webp"
+  },  
+  {
+    "id": 56,
+    "title": "",
+    "category": "",
+    "technique": "",
+    "image": ""
+  },  
+  {
+    "id": 57,
+    "title": "",
+    "category": "",
+    "technique": "",
+    "image": ""
+  },  
+  {
+    "id": 58,
+    "title": "",
+    "category": "",
+    "technique": "",
+    "image": ""
+  },  
+  {
+    "id": 59,
+    "title": "",
+    "category": "",
+    "technique": "",
+    "image": ""
+  },  
+  {
+    "id": 61,
+    "title": "",
+    "category": "",
+    "technique": "",
+    "image": ""
+  },  
+  {
+    "id": 62,
+    "title": "",
+    "category": "",
+    "technique": "",
+    "image": ""
+  },  
+  {
+    "id": 63,
+    "title": "",
+    "category": "",
+    "technique": "",
+    "image": ""
+  },  
+  {
+    "id": 64,
+    "title": "",
+    "category": "",
+    "technique": "",
+    "image": ""
+  },  
+  {
+    "id": 65,
+    "title": "",
+    "category": "",
+    "technique": "",
+    "image": ""
+  },  
+  {
+    "id": 66,
+    "title": "",
+    "category": "",
+    "technique": "",
+    "image": ""
+  }, 
+  {
+    "id": 67,
+    "title": "",
+    "category": "",
+    "technique": "",
+    "image": ""
+  },
+  {
+    "id": 68,
+    "title": "",
+    "category": "",
+    "technique": "",
+    "image": ""
+  },
+  {
+    "id": 69,
+    "title": "",
+    "category": "",
+    "technique": "",
+    "image": ""
+  },
+  {
+    "id": 70,
+    "title": "",
+    "category": "",
+    "technique": "",
+    "image": ""
   }
 ]

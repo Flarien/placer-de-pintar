@@ -5,22 +5,102 @@ import '../styles/global.css';
 
 interface Props {
 	title: string;
+	description?: string;
+	image?: string;
+	imageAlt?: string;
 }
 
-const { title } = Astro.props;
+const {
+	title = 'Norma Luján Brignoni | Artista Plástica en Mar del Plata',
+	description = 'Portfolio de Norma Luján Brignoni, artista plástica y profesora de arte en la ciudad de Mar del Plata. Cuadros en acrílico, tejas coloniales pintadas a mano, mosaiquismo y decoupage. Clases de pintura.',
+	image = 'https://res.cloudinary.com/dciovdqaf/image/upload/c_fill,w_1200,h_630,q_auto,f_jpg/v1792702544/Web%20Placer%20de%20Pintar/cuadros/cuadros_12_mmmotz.jpg',
+	imageAlt = 'Tigre hiperrealista pintado en acrílico sobre fibrofácil por Norma Luján Brignoni',
+} = Astro.props;
+
+const siteURL = Astro.site ?? new URL('https://www.elplacerdepintar.com.ar');
+
+const canonicalURL = new URL(Astro.url.pathname, siteURL);
+
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@graph': [
+		{
+			'@type': 'Person',
+			'@id': `${siteURL.origin}/#norma`,
+			name: 'Norma Luján Brignoni',
+			jobTitle: 'Artista plástica y profesora de arte',
+			description,
+			url: siteURL.origin,
+			image: `${siteURL.origin}/normalbrignoni.webp`,
+			sameAs: [
+				'https://www.instagram.com/el.placer.de.pintar',
+				'https://www.facebook.com/placer.de.pintar',
+			],
+			homeLocation: {
+				'@type': 'Place',
+				address: {
+					'@type': 'PostalAddress',
+					addressLocality: 'Mar del Plata',
+					addressRegion: 'Buenos Aires',
+					addressCountry: 'AR',
+				},
+			},
+		},
+		{
+			'@type': 'WebSite',
+			'@id': `${siteURL.origin}/#website`,
+			name: 'El Placer de Pintar',
+			url: siteURL.origin,
+			inLanguage: 'es-AR',
+			publisher: { '@id': `${siteURL.origin}/#norma` },
+		},
+	],
+};
 ---
 
 <!doctype html>
-<html lang='es'>
+<html lang='es-AR'>
 	<head>
 		<meta charset='UTF-8' />
-		<meta
-			name='description'
-			content='Portfolio de Norma Luján Brignoni - Artista Plástica'
-		/>
-		<meta name='viewport' content='width=device-width' />
-		<link rel='icon' type='image/png+xml' href='/favicon.png' />
+		<meta name='viewport' content='width=device-widthh, initial-scale=1' />
+
+		<!-- Básicos -->
 		<title>{title}</title>
+		<meta name='description' content={description} />
+		<meta name='author' content='Norma Luján Brignoni' />
+		<meta name='robots' content='index, follow, max-image-preview:large' />
+		<link rel='canonical' href={canonicalURL} />
+		<meta name='generator' content={Astro.generator} />
+
+		<!-- Íconos -->
+		<link rel='icon' type='image/png' href='/favicon.png' />
+		<meta name='theme-color' content='#ffffff' />
+
+		<!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
+		<meta property='og:type' content='website' />
+		<meta property='og:site_name' content='El Placer de Pintar' />
+		<meta property='og:locale' content='es_AR' />
+		<meta property='og:title' content={title} />
+		<meta property='og:description' content={description} />
+		<meta property='og:url' content={canonicalURL} />
+		<meta property='og:image' content={image} />
+		<meta property='og:image:width' content='1200' />
+		<meta property='og:image:height' content='630' />
+		<meta property='og:image:alt' content={imageAlt} />
+
+		<!-- Twitter / X -->
+		<meta name='twitter:card' content='summary_large_image' />
+		<meta name='twitter:title' content={title} />
+		<meta name='twitter:description' content={description} />
+		<meta name='twitter:image' content={image} />
+		<meta name='twitter:image:alt' content={imageAlt} />
+
+		<!-- Rendimiento: las imágenes salen de Cloudinary -->
+		<link rel='preconnect' href='https://res.cloudinary.com' crossorigin />
+		<link rel='dns-prefetch' href='https://res.cloudinary.com' />
+
+		<!-- Datos estructurados -->
+		<script type='application/ld+json' set:html={JSON.stringify(jsonLd)} />
 	</head>
 	<body>
 		<Header />

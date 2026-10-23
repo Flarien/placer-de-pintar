@@ -33,7 +33,7 @@ Portfolio web minimalista y elegante para la artista plástica **Norma Luján Br
 portfolio-norma/
 ├── public/
 │   ├── images/                     # Imágenes de las obras
-│   └── favicon.svg
+│   └── favicon.png
 ├── src/
 │   ├── components/
 │   │   ├── Hero.astro              # Hero section

@@ -5,7 +5,7 @@ import FullGalleryModal from '../components/FullGalleryModal.astro';
 import obras from '../data/obras.json';
 ---
 
-<SectionContainer>
+<SectionContainer id='galeria'>
   <!-- SECCIÓN CUADROS -->
   <section class='preview-section preview-cuadros'>
     <div class='preview-container'>
@@ -144,6 +144,43 @@ import obras from '../data/obras.json';
         <BtnToGallery accion='frases'>
           Ver más cuadritos con frases</BtnToGallery
         >
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN VARIOS (fondo accent, grid vertical) -->
+  <section class='preview-section preview-tejas'>
+    <div class='preview-container'>
+      <h2 class='section-title section-title--light'>Trabajos Varios</h2>
+
+      <div class='grid-tejas'>
+        <div class='grid-item grid-item--vertical animate-item'>
+          <img
+            src='https://res.cloudinary.com/dciovdqaf/image/upload/v1792702581/Web%20Placer%20de%20Pintar/varios/varios_06_jarron_wodmy0.webp'
+            alt='Botellón con decoupage'
+          />
+        </div>
+        <div class='grid-item grid-item--vertical animate-item'>
+          <img
+            src='https://res.cloudinary.com/dciovdqaf/image/upload/v1792702576/Web%20Placer%20de%20Pintar/varios/varios_04_mosaiquismo_yreujq.webp'
+            alt='Cuadro redondo con mozaiquismo'
+          />
+        </div>
+        <div class='grid-item grid-item--vertical animate-item'>
+          <img
+            src='https://res.cloudinary.com/dciovdqaf/image/upload/v1792702578/Web%20Placer%20de%20Pintar/varios/varios_08_jarron_kr4uwt.webp'
+            alt='Jarrones pintados abstractos'
+          />
+        </div>
+        <div class='grid-item grid-item--vertical animate-item'>
+          <img
+            src='https://res.cloudinary.com/dciovdqaf/image/upload/v1792702574/Web%20Placer%20de%20Pintar/varios/varios_02_caja_qubs2g.webp'
+            alt='Caja de madera de vinos con gato pintado, convinado con decoupage'
+          />
+        </div>
+      </div>
+      <div class='flex-btn'>
+        <BtnToGallery accion='tejas'> Ver más </BtnToGallery>
       </div>
     </div>
   </section>
